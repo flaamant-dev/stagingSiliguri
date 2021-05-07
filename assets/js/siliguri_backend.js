@@ -371,12 +371,16 @@ function offer_availability(business_registry_id) {
 
 function business_timingEntry(bisTiming_id) {
     if($("#business-open-slide-"+bisTiming_id).val()==1 ) {
-        console.log('Open');
-        $("#business-day-status-"+bisTiming_id).text('Open'); 
-    } else {
-        console.log('Open');
-        $("#business-day-status-"+bisTiming_id).text('Closed'); 
+        $("#business-open-slide-"+bisTiming_id).val(0);
+        $("#business-day-status-"+bisTiming_id).html('Closed'); 
+        $(".show-time-class-"+bisTiming_id).hide();
+    } else if($("#business-open-slide-"+bisTiming_id).val()==0 ) {
+        $("#business-open-slide-"+bisTiming_id).val(1);
+        $("#business-day-status-"+bisTiming_id).html('Open'); 
+        $(".show-time-class-"+bisTiming_id).show();
     }
+
+
     // $("#business-day-status-"+bisTiming_id).text('11111111'); 
     // $.ajax({
     //   url: "offer_availability",

@@ -234,7 +234,7 @@
                                         <div class="d-flex">
                                             <i class="fa fa-clock-o mr-2"></i>
                                             <h6 class="font-medium text-primary font-six pb-2" style="cursor: pointer;"
-                                                data-toggle="modal" data-target="#update-timming">Update Your Timming</h6>
+                                                data-toggle="modal" data-target="#update-timming">Update Your Timing</h6>
                 
                                         </div>
                                         
@@ -276,15 +276,15 @@
                     
                                                                     <?php if($bisTime['status'] == 1) { ?>
 
-                                                                        <input type="time" value="09:00" class="inp-des text-dark show-time-class">
+                                                                        <input type="time" value="09:00" class="inp-des text-dark show-time-class-<?php echo $bisTime['bisTiming_id']; ?>">
                         
-                                                                        <div class="ml-3 show-time-class">
+                                                                        <div class="ml-3 show-time-class-<?php echo $bisTime['bisTiming_id']; ?>">
                                                                             <div
                                                                                 style="background-color: rgb(112, 112, 112); width: 15px; height: 2px; margin-top: 12px;">
                                                                             </div>
                                                                         </div>
                         
-                                                                        <input type="time" value="17:00" class="inp-des text-dark ml-3 show-time-class">
+                                                                        <input type="time" value="17:00" class="inp-des text-dark ml-3 show-time-class-<?php echo $bisTime['bisTiming_id']; ?>">
                                                                     <?php } ?>
 
                                                                 </div>
