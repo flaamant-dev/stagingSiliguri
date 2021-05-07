@@ -275,3 +275,5 @@
         }
     </style>
 </head>
+
+<?php $this->load->view('autologout'); ?>

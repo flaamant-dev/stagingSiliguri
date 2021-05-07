@@ -168,6 +168,9 @@ function decline_saler(user_id) {
     });
 }
 
+
+
+//============================SELLER OPERATION============================
 // //add post/offer
 function add_offer(user_id) { 
     $.ajax({  
@@ -364,6 +367,25 @@ function offer_availability(business_registry_id) {
         console.log(data);
       }
     });
+}
+
+function business_timingEntry(bisTiming_id) {
+    if($("#business-open-slide-"+bisTiming_id).val()==1 ) {
+        console.log('Open');
+        $("#business-day-status-"+bisTiming_id).text('Open'); 
+    } else {
+        console.log('Open');
+        $("#business-day-status-"+bisTiming_id).text('Closed'); 
+    }
+    // $("#business-day-status-"+bisTiming_id).text('11111111'); 
+    // $.ajax({
+    //   url: "offer_availability",
+    //   type: "post",
+    //   data: { bisTiming_id: bisTiming_id },
+    //   success: function (data){
+    //     console.log(data);
+    //   }
+    // });
 }
 
 //============================SELLER OPERATION============================

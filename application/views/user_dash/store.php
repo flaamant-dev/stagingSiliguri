@@ -254,12 +254,13 @@
                                                         <?php if($businessTiming) { foreach($businessTiming as $bisTime) { ?>
                                                             <div class="mt-4">
                                                                 <div class="d-flex">
+                                                                    <div style="width: 10%;">&nbsp;</div>
                                                                     <div style="width:11%;">
                                                                         <span class="font-six font-medium"><?php echo $bisTime['day']; ?></span>
                                                                     </div>
                                                                     <div class="ml-3">
                                                                         <label class="switch mb-0" style="vertical-align: middle;">
-                                                                            <input type="checkbox" <?php if($bisTime['status'] == 1) echo 'checked'; ?>>
+                                                                            <input type="checkbox" onchange="business_timingEntry(<?php echo $bisTime['bisTiming_id']; ?>);" id="business-open-slide-<?php echo $bisTime['bisTiming_id']; ?>" <?php if($bisTime['status'] == 1) { echo ' value="1" checked'; } else { echo ' value="0"'; } ?>>
                                                                             <span class="slider round"></span>
                                                                         </label>
                                                                     </div>
@@ -273,225 +274,23 @@
                                                                         </span>
                                                                     </div>
                     
-                                                                    <!-- <input type="text" placeholder="09:00 AM" class="inp-des text-dark"> -->
-                                                                    <input type="time" value="09:00" class="inp-des text-dark">
-                    
-                                                                    <div class="ml-3">
-                                                                        <div
-                                                                            style="background-color: rgb(112, 112, 112); width: 15px; height: 2px; margin-top: 12px;">
+                                                                    <?php if($bisTime['status'] == 1) { ?>
+
+                                                                        <input type="time" value="09:00" class="inp-des text-dark show-time-class">
+                        
+                                                                        <div class="ml-3 show-time-class">
+                                                                            <div
+                                                                                style="background-color: rgb(112, 112, 112); width: 15px; height: 2px; margin-top: 12px;">
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                    
-                                                                    <!-- <input type="text" placeholder="05:00 PM" class="inp-des text-dark ml-3"> -->
-                                                                    <input type="time" value="17:00" class="inp-des text-dark ml-3">
-                    
-                                                                    <div class="ml-3">
-                                                                        <a href="#" class="text-primary font-medium font-six">Add Hours</a>
-                                                                    </div>
+                        
+                                                                        <input type="time" value="17:00" class="inp-des text-dark ml-3 show-time-class">
+                                                                    <?php } ?>
+
                                                                 </div>
                                                             </div>
                                                         <?php } } else { echo 'No timing found'; } ?>
-                                                        <!-- <div class="d-flex">
-                                                            <div style="width:11%;">
-                                                                <span class="font-six font-medium">Sunday</span>
-                                                            </div>
-                                                            <div class="ml-3">
-                                                                <label class="switch mb-0" style="vertical-align: middle;">
-                                                                    <input type="checkbox">
-                                                                    <span class="slider round"></span>
-                                                                </label>
-                                                            </div>
-                                                            <div style="width: 9%;">
-                                                                <span class="font-medium ml-3">Closed</span>
-                                                            </div>
-                                                        </div>                
-                                                        <div class="mt-4">
-                                                            <div class="d-flex">
-                                                                <div style="width:11%;">
-                                                                    <span class="font-six font-medium">Monday</span>
-                                                                </div>
-                                                                <div class="ml-3">
-                                                                    <label class="switch mb-0" style="vertical-align: middle;">
-                                                                        <input type="checkbox" checked>
-                                                                        <span class="slider round"></span>
-                                                                    </label>
-                                                                </div>
-                                                                <div style="width: 9%;">
-                                                                    <span class="font-medium ml-3">Open</span>
-                                                                </div>
-                
-                                                                <input type="text" placeholder="09:00 AM" class="inp-des text-dark">
-                
-                                                                <div class="ml-3">
-                                                                    <div
-                                                                        style="background-color: rgb(112, 112, 112); width: 15px; height: 2px; margin-top: 12px;">
-                                                                    </div>
-                                                                </div>
-                
-                                                                <input type="text" placeholder="05:00 PM"
-                                                                    class="inp-des text-dark ml-3">
-                
-                                                                <div class="ml-3">
-                                                                    <a href="#" class="text-primary font-medium font-six">Add Hours</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mt-4">
-                                                            <div class="d-flex">
-                                                                <div style="width:11%;">
-                                                                    <span class="font-six font-medium">Tuesday</span>
-                                                                </div>
-                                                                <div class="ml-3">
-                                                                    <label class="switch mb-0" style="vertical-align: middle;">
-                                                                        <input type="checkbox" checked>
-                                                                        <span class="slider round"></span>
-                                                                    </label>
-                                                                </div>
-                                                                <div style="width: 9%;">
-                                                                    <span class="font-medium ml-3">Open</span>
-                                                                </div>
-                
-                                                                <input type="text" placeholder="09:00 AM" class="inp-des text-dark">
-                
-                                                                <div class="ml-3">
-                                                                    <div
-                                                                        style="background-color: rgb(112, 112, 112); width: 15px; height: 2px; margin-top: 12px;">
-                                                                    </div>
-                                                                </div>
-                
-                                                                <input type="text" placeholder="05:00 PM"
-                                                                    class="inp-des text-dark ml-3">
-                
-                                                                <div class="ml-3">
-                                                                    <a href="#" class="text-primary font-medium font-six">Add Hours</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mt-4">
-                                                            <div class="d-flex">
-                                                                <div style="width:11%;">
-                                                                    <span class="font-six font-medium">Wednesday</span>
-                                                                </div>
-                                                                <div class="ml-3">
-                                                                    <label class="switch mb-0" style="vertical-align: middle;">
-                                                                        <input type="checkbox" checked>
-                                                                        <span class="slider round"></span>
-                                                                    </label>
-                                                                </div>
-                                                                <div style="width: 9%;">
-                                                                    <span class="font-medium ml-3">Open</span>
-                                                                </div>
-                
-                                                                <input type="text" placeholder="09:00 AM" class="inp-des text-dark">
-                
-                                                                <div class="ml-3">
-                                                                    <div
-                                                                        style="background-color: rgb(112, 112, 112); width: 15px; height: 2px; margin-top: 12px;">
-                                                                    </div>
-                                                                </div>
-                
-                                                                <input type="text" placeholder="05:00 PM"
-                                                                    class="inp-des text-dark ml-3">
-                
-                                                                <div class="ml-3">
-                                                                    <a href="#" class="text-primary font-medium font-six">Add Hours</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mt-4">
-                                                            <div class="d-flex">
-                                                                <div style="width:11%;">
-                                                                    <span class="font-six font-medium">Thursday</span>
-                                                                </div>
-                                                                <div class="ml-3">
-                                                                    <label class="switch mb-0" style="vertical-align: middle;">
-                                                                        <input type="checkbox" checked>
-                                                                        <span class="slider round"></span>
-                                                                    </label>
-                                                                </div>
-                                                                <div style="width: 9%;">
-                                                                    <span class="font-medium ml-3">Open</span>
-                                                                </div>
-                
-                                                                <input type="text" placeholder="09:00 AM" class="inp-des text-dark">
-                
-                                                                <div class="ml-3">
-                                                                    <div
-                                                                        style="background-color: rgb(112, 112, 112); width: 15px; height: 2px; margin-top: 12px;">
-                                                                    </div>
-                                                                </div>
-                
-                                                                <input type="text" placeholder="05:00 PM"
-                                                                    class="inp-des text-dark ml-3">
-                
-                                                                <div class="ml-3">
-                                                                    <a href="#" class="text-primary font-medium font-six">Add Hours</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mt-4">
-                                                            <div class="d-flex">
-                                                                <div style="width:11%;">
-                                                                    <span class="font-six font-medium">Friday</span>
-                                                                </div>
-                                                                <div class="ml-3">
-                                                                    <label class="switch mb-0" style="vertical-align: middle;">
-                                                                        <input type="checkbox" checked>
-                                                                        <span class="slider round"></span>
-                                                                    </label>
-                                                                </div>
-                                                                <div style="width: 9%;">
-                                                                    <span class="font-medium ml-3">Open</span>
-                                                                </div>
-                
-                                                                <input type="text" placeholder="09:00 AM" class="inp-des text-dark">
-                
-                                                                <div class="ml-3">
-                                                                    <div
-                                                                        style="background-color: rgb(112, 112, 112); width: 15px; height: 2px; margin-top: 12px;">
-                                                                    </div>
-                                                                </div>
-                
-                                                                <input type="text" placeholder="05:00 PM"
-                                                                    class="inp-des text-dark ml-3">
-                
-                                                                <div class="ml-3">
-                                                                    <a href="#" class="text-primary font-medium font-six">Add Hours</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mt-4">
-                                                            <div class="d-flex">
-                                                                <div style="width:11%;">
-                                                                    <span class="font-six font-medium">Saturday</span>
-                                                                </div>
-                                                                <div class="ml-3">
-                                                                    <label class="switch mb-0" style="vertical-align: middle;">
-                                                                        <input type="checkbox" checked>
-                                                                        <span class="slider round"></span>
-                                                                    </label>
-                                                                </div>
-                                                                <div style="width: 9%;">
-                                                                    <span class="font-medium ml-3">Open</span>
-                                                                </div>
-                
-                                                                <input type="text" placeholder="09:00 AM" class="inp-des text-dark">
-                
-                                                                <div class="ml-3">
-                                                                    <div
-                                                                        style="background-color: rgb(112, 112, 112); width: 15px; height: 2px; margin-top: 12px;">
-                                                                    </div>
-                                                                </div>
-                
-                                                                <input type="text" placeholder="05:00 PM"
-                                                                    class="inp-des text-dark ml-3">
-                
-                                                                <div class="ml-3">
-                                                                    <a href="#" class="text-primary font-medium font-six">Add Hours</a>
-                                                                </div>
-                                                            </div>
-                                                        </div> -->
-                
+                                                                        
                                                     </div>
                                                     <div class="modal-footer">
                                                         <div class="text-right">

@@ -39,6 +39,7 @@ class Users extends CI_Controller {
 	    $this->session->unset_userdata('user_id');
 	    $this->session->unset_userdata('type');
 	    $this->session->unset_userdata('logged_in');
+	    $this->session->unset_userdata('login_time');
 	    $this->session->unset_userdata('google_access_token');
 	    	
         // $referer = $_SERVER['HTTP_REFERER'];
