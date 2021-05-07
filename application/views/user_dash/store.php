@@ -285,6 +285,17 @@
                                                                         </div>
                         
                                                                         <input type="time" value="17:00" class="inp-des text-dark ml-3 show-time-class-<?php echo $bisTime['bisTiming_id']; ?>">
+                                                                    <?php } else {?>
+
+                                                                        <input type="time" value="09:00" class="inp-des text-dark show-time-class-<?php echo $bisTime['bisTiming_id']; ?>" style="display:none">
+
+                                                                        <div class="ml-3 show-time-class-<?php echo $bisTime['bisTiming_id']; ?>" style="display:none">
+                                                                            <div
+                                                                                style="background-color: rgb(112, 112, 112); width: 15px; height: 2px; margin-top: 12px;">
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <input type="time" value="17:00" class="inp-des text-dark ml-3 show-time-class-<?php echo $bisTime['bisTiming_id']; ?>" style="display:none">
                                                                     <?php } ?>
 
                                                                 </div>
