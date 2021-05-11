@@ -234,15 +234,13 @@
                                         <div class="d-flex">
                                             <i class="fa fa-clock-o mr-2"></i>
                                             <h6 class="font-medium text-primary font-six pb-2" style="cursor: pointer;"
-                                                data-toggle="modal" data-target="#update-timming">Update Your Timing</h6>
-                
+                                                data-toggle="modal" data-target="#update-businessTimming">Update Your Timing</h6>                
                                         </div>
                                         
-                                        <div class="modal fade" id="update-timming" tabindex="-1" role="dialog"
-                                            aria-labelledby="update-timmingLabel" aria-hidden="true">
+                                        <div class="modal fade" id="update-businessTimming" tabindex="-1" role="dialog"
+                                            aria-labelledby="update-businessTimmingLabel" aria-hidden="true">
                                             <?php $businessTiming = $this->Business_model->show_businessTiming($business_registry_id); ?>
-                                            <div class="modal-dialog modal-lg" role="document"
-                                                style="text-align: -webkit-center !important;">
+                                            <div class="modal-dialog modal-lg" role="document" style="text-align: -webkit-center !important;">
                                                 <div class="modal-content">
                                                     <div class="modal-header d-flex">
                                                         <h5 class="modal-title" id="scrollmodalLabel">Update timming</h5>
@@ -254,17 +252,19 @@
                                                         <?php if($businessTiming) { foreach($businessTiming as $bisTime) { ?>
                                                             <div class="mt-4">
                                                                 <div class="d-flex">
-                                                                    <div style="width: 10%;">&nbsp;</div>
-                                                                    <div style="width:11%;">
+                                                                    <div style="width: 5%;">&nbsp;</div>
+                                                                    <div style="width:20%;">
                                                                         <span class="font-six font-medium"><?php echo $bisTime['day']; ?></span>
                                                                     </div>
-                                                                    <div class="ml-3">
+                                                                    <div class="ml-3" style="width:10%;">
                                                                         <label class="switch mb-0" style="vertical-align: middle;">
-                                                                            <input type="checkbox" onchange="business_timingEntry(<?php echo $bisTime['bisTiming_id']; ?>);" id="business-open-slide-<?php echo $bisTime['bisTiming_id']; ?>" <?php if($bisTime['status'] == 1) { echo ' value="1" checked'; } else { echo ' value="0"'; } ?>>
+                                                                            <input type="checkbox" onchange="business_timingEntry(<?php echo $bisTime['bisTiming_id']; ?>);" 
+                                                                                    id="business-open-slide-<?php echo $bisTime['bisTiming_id']; ?>" 
+                                                                                    <?php if($bisTime['status'] == 1) { echo ' value="1" checked'; } else { echo ' value="0"'; } ?>>
                                                                             <span class="slider round"></span>
                                                                         </label>
                                                                     </div>
-                                                                    <div style="width: 9%;">
+                                                                    <div style="width: 18%;">
                                                                         <span class="font-medium ml-3" id="business-day-status-<?php echo $bisTime['bisTiming_id']; ?>">
                                                                             <?php if($bisTime['status'] == 1) {
                                                                                 echo 'Open';
@@ -275,39 +275,33 @@
                                                                     </div>
                     
                                                                     <?php if($bisTime['status'] == 1) { ?>
-
                                                                         <input type="time" value="09:00" class="inp-des text-dark show-time-class-<?php echo $bisTime['bisTiming_id']; ?>">
-                        
                                                                         <div class="ml-3 show-time-class-<?php echo $bisTime['bisTiming_id']; ?>">
                                                                             <div
                                                                                 style="background-color: rgb(112, 112, 112); width: 15px; height: 2px; margin-top: 12px;">
                                                                             </div>
-                                                                        </div>
-                        
+                                                                        </div>                        
                                                                         <input type="time" value="17:00" class="inp-des text-dark ml-3 show-time-class-<?php echo $bisTime['bisTiming_id']; ?>">
                                                                     <?php } else {?>
-
                                                                         <input type="time" value="09:00" class="inp-des text-dark show-time-class-<?php echo $bisTime['bisTiming_id']; ?>" style="display:none">
-
                                                                         <div class="ml-3 show-time-class-<?php echo $bisTime['bisTiming_id']; ?>" style="display:none">
                                                                             <div
                                                                                 style="background-color: rgb(112, 112, 112); width: 15px; height: 2px; margin-top: 12px;">
                                                                             </div>
                                                                         </div>
-
                                                                         <input type="time" value="17:00" class="inp-des text-dark ml-3 show-time-class-<?php echo $bisTime['bisTiming_id']; ?>" style="display:none">
                                                                     <?php } ?>
-
                                                                 </div>
                                                             </div>
                                                         <?php } } else { echo 'No timing found'; } ?>
-                                                                        
+                                                        
+                                                        <br></hr>
+                                                        <div class="text-center">
+                                                            <button type="button" class="btn btn-primary font-medium" onclick="update_business_timing(<?php echo $business_registry_id; ?>)">Update Timing</button>
+                                                        </div>            
                                                     </div>
-                                                    <div class="modal-footer">
-                                                        <div class="text-right">
-                                                            <button type="button" class="btn btn-primary font-medium" data-dismiss="modal">Close</button>
-                                                        </div>
-                                                    </div>
+                                                    <!-- <div class="modal-footer">
+                                                    </div> -->
                                                 </div>
                                             </div>
                                         </div>

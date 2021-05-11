@@ -392,6 +392,11 @@ function business_timingEntry(bisTiming_id) {
     // });
 }
 
+function update_business_timing(business_registry_id) {
+    console.log(business_registry_id);
+    $("#update-businessTimming").modal('hide');
+}
+
 //============================SELLER OPERATION============================
 
 
