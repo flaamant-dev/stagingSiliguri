@@ -747,23 +747,6 @@
                                                     <div>
                                                         <div class="d-flex justify-content-between">
                                                             <div>
-                                                                <h6 class="text-dark font-medium font-six mb-2">Is your Service Available ?</h6>
-                                                                <p class="text-secondary mb-0 font-medium" style="line-height: 20px;">
-                                                                    Your business is operating in some way — even if you're only taking phone calls</p>
-                                                            </div>
-                                                            <div class="ml-3">
-                                                                <label class="switch">
-                                                                <!-- <input type="checkbox" onclick="offer_availability(<?php //echo $business_registry_id; ?>);"
-                                                                    <?php //if($businessDetails['offer_available']) { echo 'checked'; } ?>> -->
-                                                                    <span class="slider round"></span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr class="my-4">
-                                                    <div>
-                                                        <div class="d-flex justify-content-between">
-                                                            <div>
                                                                 <h6 class="text-dark font-medium font-six mb-2">Any offer Available ?
                                                                 </h6>
                                                                 <p class="text-secondary mb-0 font-medium" style="line-height: 20px;">
@@ -780,7 +763,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-primary font-medium">Done</button>
+                                                    <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">Done</button>
                                                 </div>
                                             </div>
                                         </div>
