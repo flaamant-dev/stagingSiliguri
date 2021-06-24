@@ -90,7 +90,6 @@
 		<script type="text/javascript">
 			$(document).ready(function () {
 				$('#visited-data-history').DataTable();
-				$('#bootstrap-data-table-appointment-export').DataTable();
 				$('#bootstrap-data-table-conform-export').DataTable();
 			});
 		</script>
@@ -225,18 +224,6 @@
 
 				//Appointment Request Data Table
 				(function ($) {
-
-					$('#bootstrap-data-table-appointment').DataTable({
-						lengthMenu: [[10, 20, 50, -1], [10, 20, 50, "All"]],
-					});
-
-					$('#bootstrap-data-table-appointment-export').DataTable({
-						dom: 'lBfrtip',
-						lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
-						buttons: [
-							'copy', 'csv', 'excel', 'pdf', 'print'
-						]
-					});
 
 					$('#row-select').DataTable({
 						initComplete: function () {

@@ -462,8 +462,8 @@
                                             <th>Feed</th>
                                             <th>Offer</th>
                                             <th>Create Ad</th>
-                                            <th>Offer</th>
-                                            <th>Create Ad</th>
+                                            <!-- <th>Offer</th>
+                                            <th>Create Ad</th> -->
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2177,17 +2177,6 @@
                     "scrollY": false,
                 });
 
-                $('#bootstrap-data-table-appointment-export').DataTable({
-                    dom: 'lBfrtip',
-                    lengthMenu: [
-                        [10, 25, 50, -1],
-                        [10, 25, 50, "All"]
-                    ],
-                    buttons: [
-                        'copy', 'csv', 'excel', 'pdf', 'print'
-                    ]
-                });
-
                 $('#row-select').DataTable({
                     initComplete: function() {
                         this.api().columns().every(function() {
@@ -2221,17 +2210,6 @@
                         [10, 20, 50, "All"]
                     ],
                     "scrollX": true
-                });
-
-                $('#bootstrap-data-table-product-export').DataTable({
-                    dom: 'lBfrtip',
-                    lengthMenu: [
-                        [10, 25, 50, -1],
-                        [10, 25, 50, "All"]
-                    ],
-                    buttons: [
-                        'copy', 'csv', 'excel', 'pdf', 'print'
-                    ]
                 });
 
                 $('#row-select').DataTable({
@@ -2367,14 +2345,6 @@
         }
     </script>
     <!-- /For copying text of text box-->
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#bootstrap-data-table-appointment-export').DataTable();
-            $('#bootstrap-data-table-conform-export').DataTable();
-        });
-    </script>
-
 
 
 <?php } }  ?>
