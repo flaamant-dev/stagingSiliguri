@@ -27,7 +27,6 @@ $route['users/activate_business_open'] = 'Business/activate_business_open';
 $route['users/offer_availability'] = 'Business/offer_availability';
 
 $route['Reply/add_reply_modal'] = 'Reply/add_reply_modal';
-
 $route['users/proReviewSL/(:any)'] = 'Users/view/proReviewSL/$1';
 $route['users/business_register'] = 'Users/business_register';
 $route['users/review_reply'] = 'Review/review_reply';
