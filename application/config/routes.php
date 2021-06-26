@@ -26,6 +26,8 @@ $route['users/add_newPost'] = 'Post_new/add_newPost';
 $route['users/activate_business_open'] = 'Business/activate_business_open';
 $route['users/offer_availability'] = 'Business/offer_availability';
 
+$route['users/add_newFeed'] = 'Feed/add_newFeed';
+
 $route['Reply/add_reply_modal'] = 'Reply/add_reply_modal';
 $route['users/proReviewSL/(:any)'] = 'Users/view/proReviewSL/$1';
 $route['users/business_register'] = 'Users/business_register';

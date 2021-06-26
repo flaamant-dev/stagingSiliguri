@@ -191,83 +191,6 @@
                 </div>
                 <!--/Choose Business-->
 
-                <!--Appointment Request-->
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <strong class="card-title">Appointment Request</strong>
-                            </div>
-                            <div class="card-body">
-                                <table id="bootstrap-data-table-appointment" class="table table-striped table-bordered nowrap">
-                                    <thead>
-                                        <tr>
-                                            <th>Patient Name</th>
-                                            <th>Time Slot</th>
-                                            <th>Phone</th>
-                                            <th>Doctor</th>
-                                            <th>Issue</th>
-                                            <th>Accept</th>
-                                            <th>Cancel</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>10:00 AM - 12:00 PM</td>
-                                            <td>9876543216</td>
-                                            <td>Dr. S.K.Sarkar</td>
-                                            <td>Teeth whitening</td>
-                                            <td class="text-center"><a href="#"><i
-                                                        class="fa fa-check text-success"></i></a></td>
-                                            <td class="text-center">
-                                                <a href="#"></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>10:00 AM - 12:00 PM</td>
-                                            <td>8907654132</td>
-                                            <td>Dr. Sushmita Roy Chowdhury</td>
-                                            <td>Fever</td>
-                                            <td class="text-center">
-                                                <a href="#"></a>
-                                            </td>
-                                            <td class="text-center"><a href="#"><i
-                                                        class="fa fa-times text-danger"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>12:00 PM - 02:00 PM</td>
-                                            <td>7890651243</td>
-                                            <td>Dr. Kunal Goswami</td>
-                                            <td>Hair transplant</td>
-                                            <td class="text-center"><a href="#"><i
-                                                        class="fa fa-check text-success"></i></a></td>
-                                            <td class="text-center">
-                                                <a href="#"></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Rhona Davidson</td>
-                                            <td>02:00 PM - 06:00 PM</td>
-                                            <td>9876912340</td>
-                                            <td>Dr. Sonia Agarwal</td>
-                                            <td>Eye Checkup</td>
-                                            <td class="text-center"><a href="#"><i
-                                                        class="fa fa-check text-success"></i></a></td>
-                                            <td class="text-center">
-                                                <a href="#"></a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /Appointment Request-->
-
                 <!--instant-feed, photos, create adds-->
                 <div class="row">
                     <div class="col-6 col-sm-6 col-md-3 col-lg-3">
@@ -295,6 +218,8 @@
                                     <div class="font-six text-dark">Photos</div>
                                 </div>
                             </div>
+                            </a>
+
                         </div>
 
                     </div>
@@ -309,6 +234,7 @@
                                     <div class="font-six text-dark">Videos</div>
                                 </div>
                             </div>
+                            </a>
                         </div>
 
                     </div>
@@ -324,377 +250,15 @@
                                     <div class="font-six text-dark">Create Ad</div>
                                 </div>
                             </div>
+                            </a>
+
                         </div>
 
                     </div>
                 </div>
                 <!--/instant-feed, photos, create adds-->
 
-                <!--Product Manage-->
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="d-flex justify-content-between">
-                                    <div><strong class="card-title" style="vertical-align: sub; font-size: 18px;">Product Manage</strong></div>
-                                    <div class="d-flex">
-                                        <div class="pr-2" style="border-right: 1px solid rgb(189, 189, 189);"><strong class="card-title"><a href="#" class="text-dark" data-toggle="modal" data-target="#product" style="vertical-align: sub;"><i
-                                                        class="fa fa-plus mr-1 text-success"></i><span class="font-normal">Add New</span></a></strong>
-                                        </div>
-                                        <!--Add new product modal-->
-                                        <div class="modal fade" id="product" tabindex="-1" role="dialog" aria-labelledby="productLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header d-flex justify-content-between">
-                                                        <h5 class="modal-title" id="productLabel">Add new product</h5>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-
-                                                        <!--Drag and drop image-->
-                                                        <div class="row mb-3">
-                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                                                <div class="card">
-                                                                    <div class="card-body text-center" style="background-color: rgb(235, 245, 253); border: 2px dotted rgb(0, 0, 0); height: 300px;">
-                                                                        <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);">
-                                                                            <div>Drop a file here or click the browse</div>
-                                                                            <i class="fa fa-cloud-upload" style="font-size: 25px;"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- /Drag and drop image-->
-
-                                                        <form method="POST">
-                                                            <div class="row">
-                                                                <div class="col-md-12 mb-4">
-                                                                    <div>
-                                                                        <label for="pd-name" class="label">Product Name</label>
-                                                                        <input type="text" name="pd-name" class="style">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-12 mb-4">
-
-                                                                    <div class="row">
-                                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                                                                            <label for="select-category" class="label">Select a category</label>
-                                                                            <select name="select-category" class="style">
-                                                                                <option value="cat-1">Category 1</option>
-                                                                                <option value="cat-2">Category 2</option>
-                                                                                <option value="cat-3">Category 3</option>
-                                                                                <option value="cat-4">Category 4</option>
-                                                                            </select>
-                                                                        </div>
-                                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 mt-4 mt-lg-0 mt-md-0 mt-xl-0">
-                                                                            <div>
-                                                                                <label for="pd-price" class="label">Product Price (INR)</label>
-                                                                                <input type="text" name="pd-price" class="style">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="col-md-12 mb-4">
-                                                                    <div class="set-ck-sty">
-                                                                        <textarea name="desc" id="description" style="padding: 15px; color: #000;" placeholder="Description"></textarea>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-12 mb-4">
-                                                                    <div class="set-ck-sty">
-                                                                        <textarea name="detail" id="detail" style="padding: 15px; color: #000;" placeholder="Detail"></textarea>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-12 mb-4">
-                                                                    <div class="set-ck-sty">
-                                                                        <textarea name="fe-be" id="fe-be" style="padding: 15px; color: #000;" placeholder="Features & Benefits"></textarea>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </form>
-
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                                        <button type="button" class="btn btn-primary">Confirm</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- /Add new product modal-->
-
-                                        <div style="position: relative;">
-                                            <a class="navbar-toggler pl-0 pr-0 pb-0 ml-2" data-toggle="collapse" data-target="#product-sort" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                                <button type="button" class="btn text-dark" style="background-color: lavender;">
-                                                    <div class="d-flex">
-                                                        <h4 class="mb-0 pr-3"><strong class="font-normal">Sort By</strong></h4>
-                                                        <i class="fa fa-chevron-down navbar-toggler-icon"
-                                                            style="color: grey; font-size: small; margin-top: auto;"></i>
-                                                    </div>
-                                                </button>
-                                            </a>
-                                            <div class="collapse cnf-nav-dpdown" id="product-sort" style="max-height: 345px;">
-                                                <div class="drop-style">
-                                                    <label class="mb-0">1 Week</label>
-                                                </div>
-                                                <div class="drop-style">
-                                                    <label class="mb-0">1 Month</label>
-                                                </div>
-                                                <div class="drop-style">
-                                                    <label class="mb-0">1 Year</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="card-body">
-                                <table id="bootstrap-data-table-product" class="table table-striped table-bordered nowrap">
-                                    <thead>
-                                        <tr>
-                                            <th>Product Name</th>
-                                            <th>Quantity</th>
-                                            <th>Conversion</th>
-                                            <th>Feed</th>
-                                            <th>Offer</th>
-                                            <th>Create Ad</th>
-                                            <!-- <th>Offer</th>
-                                            <th>Create Ad</th> -->
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>100</td>
-                                            <td>50</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
-                                                    <span class="font-six">Instant feed</span>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
-                                                    <span class="font-six">Add Offer</span>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
-                                                    <span class="font-six">Create Ad</span>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>100</td>
-                                            <td>50</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
-                                                    <span class="font-six">Instant feed</span>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
-                                                    <span class="font-six">Add Offer</span>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
-                                                    <span class="font-six">Create Ad</span>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>100</td>
-                                            <td>50</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
-                                                    <span class="font-six">Instant feed</span>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
-                                                    <span class="font-six">Add Offer</span>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
-                                                    <span class="font-six">Create Ad</span>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Rhona Davidson</td>
-                                            <td>100</td>
-                                            <td>50</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
-                                                    <span class="font-six">Instant feed</span>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
-                                                    <span class="font-six">Add Offer</span>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
-                                                    <span class="font-six">Create Ad</span>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- /Product Manage-->
-
-                <!--Service Manage-->
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="d-flex justify-content-between">
-                                    <div><strong class="mb-0" style="vertical-align: sub; font-size: 18px;">Service Manage</strong></div>
-                                    <div class="d-flex">
-                                        <div class="pr-2" style="border-right: 1px solid rgb(189, 189, 189);"><strong class="card-title"><a href="#" class="text-dark" style="vertical-align: sub;"><i
-                                                        class="fa fa-plus mr-1 text-success"></i><span class="font-normal">Add New</span></a></strong>
-                                        </div>
-                                        <div style="position: relative;">
-                                            <a class="navbar-toggler pl-0 pr-0 pb-0 ml-2" data-toggle="collapse" data-target="#service-sort" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                                <button type="button" class="btn text-dark" style="background-color: lavender;">
-                                                    <div class="d-flex">
-                                                        <h4 class="mb-0 pr-3"><strong class="font-normal">Sort By</strong></h4>
-                                                        <i class="fa fa-chevron-down navbar-toggler-icon"
-                                                            style="color: grey; font-size: small; margin-top: auto;"></i>
-                                                    </div>
-                                                </button>
-                                            </a>
-                                            <div class="collapse cnf-nav-dpdown" id="service-sort" style="max-height: 345px;">
-                                                <div class="drop-style">
-                                                    <label class="mb-0">1 Week</label>
-                                                </div>
-                                                <div class="drop-style">
-                                                    <label class="mb-0">1 Month</label>
-                                                </div>
-                                                <div class="drop-style">
-                                                    <label class="mb-0">1 Year</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="card-body">
-                                <table id="bootstrap-data-table-service" class="table table-striped table-bordered nowrap" style="width:100%">
-                                    <thead>
-                                        <tr>
-                                            <th>Service Name</th>
-                                            <th>No. of request</th>
-                                            <th>Conversion</th>
-                                            <th>Feed</th>
-                                            <th>Offer</th>
-                                            <th>Create Ad</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>100</td>
-                                            <td>50</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">
-                                                    <span class="font-six">Instant feed</span>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">
-                                                    <span class="font-six">Add Offer</span>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">
-                                                    <span class="font-six">Create Ad</span>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>100</td>
-                                            <td>50</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">
-                                                    <span class="font-six">Instant feed</span>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">
-                                                    <span class="font-six">Add Offer</span>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">
-                                                    <span class="font-six">Create Ad</span>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>100</td>
-                                            <td>50</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">
-                                                    <span class="font-six">Instant feed</span>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">
-                                                    <span class="font-six">Add Offer</span>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">
-                                                    <span class="font-six">Create Ad</span>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Rhona Davidson</td>
-                                            <td>100</td>
-                                            <td>50</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">
-                                                    <span class="font-six">Instant feed</span>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">
-                                                    <span class="font-six">Add Offer</span>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">
-                                                    <span class="font-six">Create Ad</span>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- /Service Manage-->
 
 
                 <div class="row">
@@ -1843,6 +1407,453 @@
 
                     </div>
                 </div>
+
+                <!--Appointment Request-->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong class="card-title">Appointment Request</strong>
+                            </div>
+                            <div class="card-body">
+                                <table id="bootstrap-data-table-appointment" class="table table-striped table-bordered nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th>Patient Name</th>
+                                            <th>Time Slot</th>
+                                            <th>Phone</th>
+                                            <th>Doctor</th>
+                                            <th>Issue</th>
+                                            <th>Accept</th>
+                                            <th>Cancel</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>10:00 AM - 12:00 PM</td>
+                                            <td>9876543216</td>
+                                            <td>Dr. S.K.Sarkar</td>
+                                            <td>Teeth whitening</td>
+                                            <td class="text-center"><a href="#"><i
+                                                        class="fa fa-check text-success"></i></a></td>
+                                            <td class="text-center">
+                                                <a href="#"></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garrett Winters</td>
+                                            <td>10:00 AM - 12:00 PM</td>
+                                            <td>8907654132</td>
+                                            <td>Dr. Sushmita Roy Chowdhury</td>
+                                            <td>Fever</td>
+                                            <td class="text-center">
+                                                <a href="#"></a>
+                                            </td>
+                                            <td class="text-center"><a href="#"><i
+                                                        class="fa fa-times text-danger"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ashton Cox</td>
+                                            <td>12:00 PM - 02:00 PM</td>
+                                            <td>7890651243</td>
+                                            <td>Dr. Kunal Goswami</td>
+                                            <td>Hair transplant</td>
+                                            <td class="text-center"><a href="#"><i
+                                                        class="fa fa-check text-success"></i></a></td>
+                                            <td class="text-center">
+                                                <a href="#"></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rhona Davidson</td>
+                                            <td>02:00 PM - 06:00 PM</td>
+                                            <td>9876912340</td>
+                                            <td>Dr. Sonia Agarwal</td>
+                                            <td>Eye Checkup</td>
+                                            <td class="text-center"><a href="#"><i
+                                                        class="fa fa-check text-success"></i></a></td>
+                                            <td class="text-center">
+                                                <a href="#"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Appointment Request-->
+
+
+
+                <!--Product Manage-->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex justify-content-between">
+                                    <div><strong class="card-title" style="vertical-align: sub; font-size: 18px;">Product Manage</strong></div>
+                                    <div class="d-flex">
+                                        <div class="pr-2" style="border-right: 1px solid rgb(189, 189, 189);"><strong class="card-title"><a href="#" class="text-dark" data-toggle="modal" data-target="#product" style="vertical-align: sub;"><i
+                                                        class="fa fa-plus mr-1 text-success"></i><span class="font-normal">Add New</span></a></strong>
+                                        </div>
+                                        <!--Add new product modal-->
+                                        <div class="modal fade" id="product" tabindex="-1" role="dialog" aria-labelledby="productLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header d-flex justify-content-between">
+                                                        <h5 class="modal-title" id="productLabel">Add new product</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+
+                                                        <!--Drag and drop image-->
+                                                        <div class="row mb-3">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="card">
+                                                                    <div class="card-body text-center" style="background-color: rgb(235, 245, 253); border: 2px dotted rgb(0, 0, 0); height: 300px;">
+                                                                        <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);">
+                                                                            <div>Drop a file here or click the browse</div>
+                                                                            <i class="fa fa-cloud-upload" style="font-size: 25px;"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /Drag and drop image-->
+
+                                                        <form method="POST">
+                                                            <div class="row">
+                                                                <div class="col-md-12 mb-4">
+                                                                    <div>
+                                                                        <label for="pd-name" class="label">Product Name</label>
+                                                                        <input type="text" name="pd-name" class="style">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12 mb-4">
+
+                                                                    <div class="row">
+                                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                                            <label for="select-category" class="label">Select a category</label>
+                                                                            <select name="select-category" class="style">
+                                                                                <option value="cat-1">Category 1</option>
+                                                                                <option value="cat-2">Category 2</option>
+                                                                                <option value="cat-3">Category 3</option>
+                                                                                <option value="cat-4">Category 4</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 mt-4 mt-lg-0 mt-md-0 mt-xl-0">
+                                                                            <div>
+                                                                                <label for="pd-price" class="label">Product Price (INR)</label>
+                                                                                <input type="text" name="pd-price" class="style">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-12 mb-4">
+                                                                    <div class="set-ck-sty">
+                                                                        <textarea name="desc" id="description" style="padding: 15px; color: #000;" placeholder="Description"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12 mb-4">
+                                                                    <div class="set-ck-sty">
+                                                                        <textarea name="detail" id="detail" style="padding: 15px; color: #000;" placeholder="Detail"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12 mb-4">
+                                                                    <div class="set-ck-sty">
+                                                                        <textarea name="fe-be" id="fe-be" style="padding: 15px; color: #000;" placeholder="Features & Benefits"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                        <button type="button" class="btn btn-primary">Confirm</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Add new product modal-->
+
+                                        <div style="position: relative;">
+                                            <a class="navbar-toggler pl-0 pr-0 pb-0 ml-2" data-toggle="collapse" data-target="#product-sort" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                                <button type="button" class="btn text-dark" style="background-color: lavender;">
+                                                    <div class="d-flex">
+                                                        <h4 class="mb-0 pr-3"><strong class="font-normal">Sort By</strong></h4>
+                                                        <i class="fa fa-chevron-down navbar-toggler-icon"
+                                                            style="color: grey; font-size: small; margin-top: auto;"></i>
+                                                    </div>
+                                                </button>
+                                            </a>
+                                            <div class="collapse cnf-nav-dpdown" id="product-sort" style="max-height: 345px;">
+                                                <div class="drop-style">
+                                                    <label class="mb-0">1 Week</label>
+                                                </div>
+                                                <div class="drop-style">
+                                                    <label class="mb-0">1 Month</label>
+                                                </div>
+                                                <div class="drop-style">
+                                                    <label class="mb-0">1 Year</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card-body">
+                                <table id="bootstrap-data-table-product" class="table table-striped table-bordered nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th>Product Name</th>
+                                            <th>Quantity</th>
+                                            <th>Conversion</th>
+                                            <th>Feed</th>
+                                            <th>Offer</th>
+                                            <th>Create Ad</th>
+                                            <!-- <th>Offer</th>
+                                            <th>Create Ad</th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>100</td>
+                                            <td>50</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
+                                                    <span class="font-six">Instant feed</span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
+                                                    <span class="font-six">Add Offer</span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
+                                                    <span class="font-six">Create Ad</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garrett Winters</td>
+                                            <td>100</td>
+                                            <td>50</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
+                                                    <span class="font-six">Instant feed</span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
+                                                    <span class="font-six">Add Offer</span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
+                                                    <span class="font-six">Create Ad</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ashton Cox</td>
+                                            <td>100</td>
+                                            <td>50</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
+                                                    <span class="font-six">Instant feed</span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
+                                                    <span class="font-six">Add Offer</span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
+                                                    <span class="font-six">Create Ad</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rhona Davidson</td>
+                                            <td>100</td>
+                                            <td>50</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
+                                                    <span class="font-six">Instant feed</span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
+                                                    <span class="font-six">Add Offer</span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">                                                    
+                                                    <span class="font-six">Create Ad</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- /Product Manage-->
+
+                <!--Service Manage-->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex justify-content-between">
+                                    <div><strong class="mb-0" style="vertical-align: sub; font-size: 18px;">Service Manage</strong></div>
+                                    <div class="d-flex">
+                                        <div class="pr-2" style="border-right: 1px solid rgb(189, 189, 189);"><strong class="card-title"><a href="#" class="text-dark" style="vertical-align: sub;"><i
+                                                        class="fa fa-plus mr-1 text-success"></i><span class="font-normal">Add New</span></a></strong>
+                                        </div>
+                                        <div style="position: relative;">
+                                            <a class="navbar-toggler pl-0 pr-0 pb-0 ml-2" data-toggle="collapse" data-target="#service-sort" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                                <button type="button" class="btn text-dark" style="background-color: lavender;">
+                                                    <div class="d-flex">
+                                                        <h4 class="mb-0 pr-3"><strong class="font-normal">Sort By</strong></h4>
+                                                        <i class="fa fa-chevron-down navbar-toggler-icon"
+                                                            style="color: grey; font-size: small; margin-top: auto;"></i>
+                                                    </div>
+                                                </button>
+                                            </a>
+                                            <div class="collapse cnf-nav-dpdown" id="service-sort" style="max-height: 345px;">
+                                                <div class="drop-style">
+                                                    <label class="mb-0">1 Week</label>
+                                                </div>
+                                                <div class="drop-style">
+                                                    <label class="mb-0">1 Month</label>
+                                                </div>
+                                                <div class="drop-style">
+                                                    <label class="mb-0">1 Year</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card-body">
+                                <table id="bootstrap-data-table-service" class="table table-striped table-bordered nowrap" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Service Name</th>
+                                            <th>No. of request</th>
+                                            <th>Conversion</th>
+                                            <th>Feed</th>
+                                            <th>Offer</th>
+                                            <th>Create Ad</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>100</td>
+                                            <td>50</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">
+                                                    <span class="font-six">Instant feed</span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">
+                                                    <span class="font-six">Add Offer</span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">
+                                                    <span class="font-six">Create Ad</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garrett Winters</td>
+                                            <td>100</td>
+                                            <td>50</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">
+                                                    <span class="font-six">Instant feed</span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">
+                                                    <span class="font-six">Add Offer</span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">
+                                                    <span class="font-six">Create Ad</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ashton Cox</td>
+                                            <td>100</td>
+                                            <td>50</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">
+                                                    <span class="font-six">Instant feed</span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">
+                                                    <span class="font-six">Add Offer</span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">
+                                                    <span class="font-six">Create Ad</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rhona Davidson</td>
+                                            <td>100</td>
+                                            <td>50</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">
+                                                    <span class="font-six">Instant feed</span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">
+                                                    <span class="font-six">Add Offer</span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">
+                                                    <span class="font-six">Create Ad</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- /Service Manage-->
+
+
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-6 col-lg-3 pr-md-2 pr-lg-2">
                         <!--Latest feed-->
@@ -1968,56 +1979,67 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="tab-pane fade" id="custom-nav-share-link" role="tabpanel" aria-labelledby="custom-nav-share-link-tab">
-                                                            <div class="card">
-                                                                <div class="card-body">
-                                                                    <div class="card-body text-center mb-3" style="background-color: rgb(235, 245, 253); border: 2px dotted rgb(0, 0, 0); height: 200px;">
-                                                                        <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);">
-                                                                            <div>Drop a file here or click the browse</div>
-                                                                            <i class="fa fa-cloud-upload" style="font-size: 25px;"></i>
-                                                                        </div>
-                                                                    </div>
 
-                                                                    <form method="post">
+                                                        <form action="add_newFeed" method="post" enctype="multipart/form-data">
+                                                            <div class="tab-pane fade" id="custom-nav-share-link" role="tabpanel" aria-labelledby="custom-nav-share-link-tab">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <div class="card-body text-center mb-3"
+                                                                            style="background-color: rgb(235, 245, 253); border: 2px dotted rgb(0, 0, 0); height: 200px;">
+                                                                            <div
+                                                                                style="position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);">
+                                                                                <div>                                                                                
+                                                                                    <label>Select Images: </label>
+                                                                                    
+                                                                                </div>
+                                                                                <i class="fa fa-cloud-upload" style="font-size: 25px;"><input type="file" name="image[]" class="form-control" multiple></i>
+                                                                            </div>
+                                                                        </div>
+                
                                                                         <div class="row">
                                                                             <div class="col-12 mb-3">
                                                                                 <div>
+
+                                                                                    <input type="hidden" name="business_registry_id" value="<?php echo $business_registry_id; ?>">
+                                                                                    
                                                                                     <label for="mail" class="label">Paste Video
                                                                                         link</label>
-                                                                                    <input type="text" name="mail" class="style">
+                                                                                    <input type="text" name="video_link" class="style">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-12 mb-3">
                                                                                 <div>
                                                                                     <label for="mail" class="label">Product
                                                                                         title</label>
-                                                                                    <input type="text" name="mail" class="style">
+                                                                                    <input type="text" name="title" class="style">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-12 mb-3">
                                                                                 <div>
-                                                                                    <textarea name="Pro-description" id="post-product-desc"></textarea>
+                                                                                    <textarea name="description"
+                                                                                        id="post-product-desc"></textarea>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </form>
-
-                                                                    <div class="d-flex justify-content-between">
-                                                                        <i class="fa fa-chevron-circle-right text-success" style="font-size: 35px;"></i>
-                                                                        <button type="button" class="btn btn-outline-success" onclick="window.location.href='post.html'">Visit
-                                                                            Profile</button>
+                
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <button type="submit">
+                                                                                <i class="fa fa-chevron-circle-right text-success" style="font-size: 35px;"></i>
+                                                                            </button>
+                                                                            <a href="<?php echo base_url(); ?>users/post" class="btn btn-outline-success">
+                                                                                Visit Profile</a>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
+                                                        </form>
 
+                                                    </div>
+                
                                                 </div>
                                             </div>
-                                        </div>
-
-                                    </div>
-
+                                        </div>                
+                                    </div>                
                                 </div>
                             </div>
                         </div>
@@ -2155,11 +2177,6 @@
 
     <!--  Chart js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.bundle.min.js"></script>
-
-
-
-
-
 
     <script>
         jQuery(document).ready(function($) {

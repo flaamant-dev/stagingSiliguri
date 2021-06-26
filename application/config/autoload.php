@@ -14,4 +14,4 @@ $autoload['config'] = array();
 $autoload['language'] = array();
 
 $autoload['model'] = array('Page_model','Category_model','Backend_model','FrontUser_model', 'Review_model',
-                    'Business_model','Product_model','ServPro_model','User_model','Status_model','Doctor_model','Post_model');
+                    'Business_model','Product_model','ServPro_model','User_model','Status_model','Doctor_model','Post_model','Feed_model');
