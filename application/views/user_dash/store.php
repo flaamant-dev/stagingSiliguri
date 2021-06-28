@@ -1892,7 +1892,6 @@
                                                                             <div class="row">
                                                                                 <div class="col-12 mb-3">
                                                                                     <div>
-
                                                                                         <input type="hidden" name="business_registry_id" value="<?php echo $business_registry_id; ?>">
                                                                                         
                                                                                         <!-- <label for="mail" class="label">Paste Video link</label> -->
