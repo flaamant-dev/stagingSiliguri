@@ -1878,15 +1878,14 @@
                                                                     <div class="card-body">
                                                                         <form action="add_newFeed" method="post" enctype="multipart/form-data">
                                                                 
-                                                                            <div class="card-body text-center mb-3"
-                                                                                style="background-color: rgb(235, 245, 253); border: 2px dotted rgb(0, 0, 0); height: 200px;">
-                                                                                <div
-                                                                                    style="position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);">
+                                                                            <div class="card-body text-center mb-3" style="background-color: rgb(235, 245, 253); border: 2px dotted rgb(0, 0, 0); height: 200px;">
+                                                                                <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);">
                                                                                     <div>                                                                                
-                                                                                        <label>Select Images: </label>
-                                                                                        
+                                                                                        <label>Select Images: </label>                                                                                        
                                                                                     </div>
-                                                                                    <i class="fa fa-cloud-upload" style="font-size: 25px;"><input type="file" name="image[]" class="form-control" multiple></i>
+                                                                                    <i class="fa fa-cloud-upload" style="font-size: 25px;">
+                                                                                    <input type="file" name="image[]" class="form-control" multiple>
+                                                                                    </i>
                                                                                 </div>
                                                                             </div>
                     
@@ -1896,22 +1895,19 @@
 
                                                                                         <input type="hidden" name="business_registry_id" value="<?php echo $business_registry_id; ?>">
                                                                                         
-                                                                                        <label for="mail" class="label">Paste Video
-                                                                                            link</label>
-                                                                                        <input type="text" name="video_link" class="style">
+                                                                                        <!-- <label for="mail" class="label">Paste Video link</label> -->
+                                                                                        <input type="text" name="video_link" placeholder="Paste Video link" class="form-control">
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="col-12 mb-3">
                                                                                     <div>
-                                                                                        <label for="mail" class="label">Product
-                                                                                            title</label>
-                                                                                        <input type="text" name="title" class="style">
+                                                                                        <!-- <label for="mail" class="label">Product title</label> -->
+                                                                                        <input type="text" name="title" placeholder="Product title" class="form-control">
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="col-12 mb-3">
                                                                                     <div>
-                                                                                        <textarea name="description"
-                                                                                            id="post-product-desc"></textarea>
+                                                                                        <textarea name="description" class="form-control" placeholder="Feed description...." id="post-product-desc"></textarea>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
