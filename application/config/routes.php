@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
    
+$route['admin/dashboard'] = 'Backend/view/dashboard';
 $route['business_profile/(:any)'] = 'Pages/view/business_profile/$1';
 $route['doctor_details/(:any)'] = 'Pages/view/doctor_details/$1';
 //$route['fb/fb_callback'] = 'Pages/fb_callback';

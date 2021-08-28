@@ -1,7 +1,7 @@
 <?php if(!$this->session->userdata('logged_in')) {
-    redirect('home');
-} else { ?>
-<?php if($this->uri->segment(1) == "admin") {   ?>
+    redirect('admin/home');
+} else { 
+    if($this->uri->segment(1) == "admin") {   ?>
 
     <!-- Content -->
     <div class="content">
@@ -18,7 +18,7 @@
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">
-                                        <div class="stat-text">Profile<!--span class="count"></span--></div>
+                                        <div class="stat-text">Profile</div>
                                         <div class="stat-heading">Profile</div>
                                     </div>
                                 </div>
@@ -37,7 +37,7 @@
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">
-                                        <div class="stat-text">Catagories<!--span class="count">23569</span--></div>
+                                        <div class="stat-text">Catagories</div>
                                         <div class="stat-heading">Catagories</div>
                                     </div>
                                 </div>
@@ -56,7 +56,7 @@
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">
-                                        <div class="stat-text">Enrolled<!--span class="count">23569</span--></div>
+                                        <div class="stat-text">Enrolled</div>
                                         <div class="stat-heading">Enrolled</div>
                                     </div>
                                 </div>
@@ -75,7 +75,7 @@
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">
-                                        <div class="stat-text">Sellers<!--span class="count">23569</span--></div>
+                                        <div class="stat-text">Sellers</div>
                                         <div class="stat-heading">Sellers</div>
                                     </div>
                                 </div>
@@ -97,7 +97,7 @@
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">
-                                        <div class="stat-text">Users<!--span class="count">23569</span--></div>
+                                        <div class="stat-text">Users</div>
                                         <div class="stat-heading">Users</div>
                                     </div>
                                 </div>
@@ -116,7 +116,7 @@
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">
-                                        <div class="stat-text">Sells<!--span class="count">23569</span--></div>
+                                        <div class="stat-text">Sells</div>
                                         <div class="stat-heading">Sells</div>
                                     </div>
                                 </div>
@@ -135,7 +135,7 @@
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">
-                                        <div class="stat-text">Logistics<!--span class="count">23569</span--></div>
+                                        <div class="stat-text">Logistics</div>
                                         <div class="stat-heading">Logistics</div>
                                     </div>
                                 </div>
@@ -154,7 +154,7 @@
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">
-                                        <div class="stat-text">Accounts<!--span class="count">23569</span--></div>
+                                        <div class="stat-text">Account</div>
                                         <div class="stat-heading">Accounts</div>
                                     </div>
                                 </div>

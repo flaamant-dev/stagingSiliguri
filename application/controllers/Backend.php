@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Backend extends CI_Controller {
 
-	public function view($page = '' ){
+	public function view($page = 'dashboard' ){
 		
 		if ( !file_exists('application/views/admin/'.$page.'.php')) {
 			show_404();		
@@ -11,15 +11,15 @@ class Backend extends CI_Controller {
 		
 		$data['customercare'] = $this->Page_model->show_customercare(); 
 
-		if (!empty($_SERVER['HTTP_CLIENT_IP'])) {   //check ip from share internet
-            $ip = $_SERVER['HTTP_CLIENT_IP'];
-        } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {   //to check ip is pass from proxy
-            $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-        } else {
-            $ip = $_SERVER['REMOTE_ADDR'];
-		}
+		// if (!empty($_SERVER['HTTP_CLIENT_IP'])) {   //check ip from share internet
+        //     $ip = $_SERVER['HTTP_CLIENT_IP'];
+        // } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {   //to check ip is pass from proxy
+        //     $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        // } else {
+        //     $ip = $_SERVER['REMOTE_ADDR'];
+		// }
 		
-		$this->Backend_model->store_ip($ip);
+		// $this->Backend_model->store_ip($ip);
 		$data['keywords'] = 'This is Siliguri.City';
 
 		$this->load->view('templates/header',$data);
@@ -46,22 +46,23 @@ class Backend extends CI_Controller {
 			$user_id = $this->Backend_model->backend_login($username,$password);
 			$login_time = $this->Backend_model->update_loginTime($user_id['admin_id']);
 			
-			if($user_id) {
+			if(is_array($user_id)) {
 			    $user_dataaa = array(
 					'user_id'   	=> $user_id['admin_id'],
 					'name'  		=> $user_id['admin_name'],
 					'email'  		=> $username,
 					'type'      	=> $user_id['admin_type'],
-					'logged_in' => true
+					'logged_in' 	=> true
 			    );
 			    
 	    		$this->session->set_flashdata('backend_loggedin','You are now logged in.');
-			    $this->session->set_userdata($user_dataaa);			    
+			    $this->session->set_userdata($user_dataaa);		 
 			    redirect('admin/dashboard');
 			} else {
 				$this->session->set_flashdata('login_failed','Invalid username or password.');		
-				$referer = $_SERVER['HTTP_REFERER'];
-				header("Location: $referer");
+				// $referer = $_SERVER['HTTP_REFERER'];
+				// header("Location: $referer");		    
+			    redirect('admin/home');
 			} 
 			
 		}
