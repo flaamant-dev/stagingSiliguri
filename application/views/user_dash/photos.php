@@ -17,6 +17,8 @@
     }
 	
     $businessDetails = $this->Business_model->show_businessDetails($business_registry_id);
+    $all_feed =  $this->Feed_model->show_feed($business_registry_id);
+
 ?>
 
 
@@ -181,7 +183,7 @@
                                                                     <div class="text-center box-des">
                                                                         <h4 class="mb-1">Keep your Customers or Visitors</h4>
                                                                         <h5 class="font-weight-bold">Up-to-date</h5>
-                                                                        <button type="button" class="btn btn-primary btn-sm mt-3 font-normal font-six">Post
+                                                                        <button type="button" class="btn btn-primary btn-sm mt-3 font-normal font-six" data-toggle="modal" data-target="#postfeed" style="cursor: pointer;">Post
                                                                             a Feed</button>
                                                                     </div>
                                                                 </div>
@@ -189,48 +191,29 @@
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-                                                            <div class="card">
-                                                                <div class="card-body">                                                                                               
-                                                                    <img src="<?php echo base_url(); ?>images/aadc.png" class="img-fluid" style="border-radius: 5px;">                                                                                                     
-                                                                    <div class="mt-2">
-                                                                        <h4 class="font-six" style="font-size: 20px;">Enter the title of post</h4>
+                                                        <?php
+                                                            foreach($all_feed as $feed){
+                                                        ?>
+
+                                                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                                                <div class="card">
+                                                                    <div class="card-body">                                                                                               
+                                                                        <img src="<?php echo base_url(); ?>images/feed_img/<?php  echo $feed['image'];?>" class="img-fluid" style="border-radius: 5px;">                                                                                                     
+                                                                        <div class="mt-2">
+                                                                            <h4 class="font-six" style="font-size: 20px;"><?php  echo $feed['title'];?></h4>
+                                                                        </div>
+                                                                        <div class="d-flex">
+                                                                            <div class="font-six pr-2" style="border-right: 1px solid rgb(189, 189, 189);"><span class="mr-1 font-medium">1,699,109</span><span>Views</span></div>
+                                                                            <div class="font-six pl-2"><span class="mr-1 font-medium">1,699</span><span>Clicks</span></div>
+                                                                        </div>                                           
                                                                     </div>
-                                                                    <div class="d-flex">
-                                                                        <div class="font-six pr-2" style="border-right: 1px solid rgb(189, 189, 189);"><span class="mr-1 font-medium">1,699,109</span><span>Views</span></div>
-                                                                        <div class="font-six pl-2"><span class="mr-1 font-medium">1,699</span><span>Clicks</span></div>
-                                                                    </div>                                           
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-                                                            <div class="card">
-                                                                <div class="card-body">                                                                                               
-                                                                    <img src="<?php echo base_url(); ?>images/aadc.png" class="img-fluid" style="border-radius: 5px;">                                                                                                     
-                                                                    <div class="mt-2">
-                                                                        <h4 class="font-six" style="font-size: 20px;">Enter the title of post</h4>
-                                                                    </div>
-                                                                    <div class="d-flex">
-                                                                        <div class="font-six pr-2" style="border-right: 1px solid rgb(189, 189, 189);"><span class="mr-1 font-medium">1,699,109</span><span>Views</span></div>
-                                                                        <div class="font-six pl-2"><span class="mr-1 font-medium">1,699</span><span>Clicks</span></div>
-                                                                    </div>                                           
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-                                                            <div class="card">
-                                                                <div class="card-body">                                                                                               
-                                                                    <img src="<?php echo base_url(); ?>images/aadc.png" class="img-fluid" style="border-radius: 5px;">                                                                                                     
-                                                                    <div class="mt-2">
-                                                                        <h4 class="font-six" style="font-size: 20px;">Enter the title of post</h4>
-                                                                    </div>
-                                                                    <div class="d-flex">
-                                                                        <div class="font-six pr-2" style="border-right: 1px solid rgb(189, 189, 189);"><span class="mr-1 font-medium">1,699,109</span><span>Views</span></div>
-                                                                        <div class="font-six pl-2"><span class="mr-1 font-medium">1,699</span><span>Clicks</span></div>
-                                                                    </div>                                           
-                                                                </div>
-                                                            </div>
-                                                        </div>
+
+                                                        <?php
+                                                            }
+                                                        ?>
+
                                                         
                                                     </div>
                                                 </div>
@@ -248,6 +231,78 @@
                 
         </div>
     </div><!-- .content -->
+
+    <!--Modal of feed-->
+    
+    <div class="modal fade" id="postfeed" tabindex="-1" role="dialog" aria-labelledby="postfeedLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between">
+                    <h5 class="modal-title font-large" id="postfeedLabel">Feed</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Keep your customers engage for better rich</h3>                
+                    <div class="card mb-0" style="-webkit-box-shadow: none; box-shadow: none;">
+                        <div class="card-body">
+                            <div class="tab-pane" id="custom-nav-share-link" role="tabpanel" aria-labelledby="custom-nav-share-link-tab">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <form action="add_newFeed" method="post" enctype="multipart/form-data">
+                                            <div class="card-body text-center mb-3" style="background-color: rgb(235, 245, 253); border: 2px dotted rgb(0, 0, 0); height: 200px;">
+                                                <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);">
+                                                    <div>                                                                                
+                                                        <label>Select Images: </label>                                                                                        
+                                                    </div>
+                                                    <i class="fa fa-cloud-upload" style="font-size: 25px;">
+                                                        <input type="file" name="image[]" class="form-control" multiple>
+                                                    </i>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <div>
+                                                        <input type="hidden" name="business_registry_id" value="<?php echo $business_registry_id; ?>">
+                                                                                        
+                                                        <!-- <label for="mail" class="label">Paste Video link</label> -->
+                                                        <input type="text" name="video_link" placeholder="Paste Video link" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mb-3">
+                                                    <div>
+                                                        <!-- <label for="mail" class="label">Product title</label> -->
+                                                        <input type="text" name="title" placeholder="Product title" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mb-3">
+                                                    <div>
+                                                        <textarea name="description" class="form-control" placeholder="Feed description...." id="post-product-desc"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="d-flex justify-content-between">
+                                                <button type="submit">
+                                                    <i class="fa fa-chevron-circle-right text-success" style="font-size: 35px;"></i>
+                                                </button>
+                                                <a href="<?php echo base_url(); ?>users/post" class="btn btn-outline-success"> Visit Profile</a>
+                                            </div>
+                                                                        
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                </div>                
+            </div>
+        </div>
+    </div>
+    <!-- /Modal of feed-->
+
         
     <div class="clearfix"></div>
 

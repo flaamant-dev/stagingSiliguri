@@ -1,42 +1,8 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="">
-<!--<![endif]-->
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ela Admin - HTML5 Admin Template</title>
-    <meta name="description" content="Ela Admin - HTML5 Admin Template">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
-    <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/newStyle.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+<?php
+    $all_feed =  $this->Feed_model->show_feed();
 
 
-    <!--Select 2 Css-->
-    <link href="assets/Plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
-
-
-
-</head>
-
-<body>
-
-
+?>
     <div class="animated fadeIn">
         <div class="row mx-auto">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0">
@@ -69,7 +35,7 @@
 
 
                             <div class="row mr-sm-0">
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 pr-sm-0">
+                                <!-- <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 pr-sm-0">
                                     <div class="cus-info-border mb-3 bg-white">
                                         <div class="cus-info-header">
                                             <div class="d-flex row-middle">
@@ -164,27 +130,30 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
+                                <?php
+                                    foreach($all_feed as $feed){
+                                ?>
                                 <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 pr-sm-0">
                                     <div class="cus-info-border mb-3 bg-white">
                                         <div class="cus-info-header">
                                             <div class="d-flex row-middle">
                                                 <div class="cs-logo-container">
-                                                    <img src="./images/l.jpg" class="cs-logo-rounded">
+                                                    <img src="./images/stores/<?php echo $feed['business_registry_id']; ?>/logo/<?php echo $feed['logo'];?>" class="cs-logo-rounded">
                                                 </div>
                                                 <div class="ml-2 line-height-16 d-inline-block text-truncate" style="max-width: 95%;">
-                                                    <span class="font-small font-bold cs-text-dark mb-0">Name of Business or title
+                                                    <span class="font-small font-bold cs-text-dark mb-0"><?php  echo $feed['business_name'];?>
                                                             </span>
-                                                    <span class="d-block font-extra-small text-secondary">5 Days Ago</span>
+                                                    <span class="d-block font-extra-small text-secondary"><?php echo date("d/m/Y",strtotime($feed['timestamp'])); ?></span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="cs-feed-image-container">
-                                            <img src="./images/aadc.png" class="w-100" />
+                                            <img src="./images/feed_img/<?php  echo $feed['image'];?>" class="w-100" />
                                         </div>
                                         <div class="p-3">
-                                            <h5 class="font-small d-block font-bold cs-text-dark mb-1">Name of Business or title</h5>
-                                            <p class="font-extra-small text-secondary line-height-16 mb-1">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs</p>
+                                            <h5 class="font-small d-block font-bold cs-text-dark mb-1"><?php  echo $feed['title'];?></h5>
+                                            <p class="font-extra-small text-secondary line-height-16 mb-1"><?php  echo character_limiter($feed['description'],50);?></p>
                                             <span class="d-block line-height-16 mb-1">
                                                         <span class="font-extra-small">Link :</span>
                                             <a href="https://www.w3schools.com/" target="_blank" class="font-extra-small">Google</a>
@@ -197,6 +166,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                <?php
+                                    }
+                                ?>
 
 
 
@@ -411,7 +383,6 @@
     <!-- Right Panel -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
@@ -474,6 +445,3 @@
         });
     </script>
     <!-- Select 2 Script -->
-</body>
-
-</html>
