@@ -1,6 +1,6 @@
 <?php 
     $user = $this->Status_model->show_user_professional_status($this->session->userdata('user_id')); 
-    if($this->session->userdata('logged_in') && $user['user_type'] == 'Saler') { 
+    if($this->session->userdata('ulogged_in') && $user['user_type'] == 'Saler') { 
         $seller = $this->ServPro_model->show_saler_details($this->session->userdata('user_id'));
         $product_id = $this->uri->segment(3);
         $my_product_dtl = $this->Product_model->show_product_saler($this->session->userdata('user_id'),$product_id);

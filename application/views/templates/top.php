@@ -25,8 +25,7 @@
                             <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
                         </form>
                     </div>
-                    <?php if($this->session->userdata('logged_in') ) {?>
-                        <?php if(!($this->session->userdata('type') == 'SUPER_ADMIN' )) { ?>
+                        <?php if($this->session->userdata('ulogged_in') ) { ?>
                             <?php $user = $this->Status_model->show_user_professional_status($this->session->userdata('user_id')); ?>
                             <?php if($user['user_type'] == 'User') { ?>
                                 <div class="dropdown for-notification">
@@ -44,15 +43,12 @@
                                     </a>
                                 </div>
                             <?php } ?>
-                        <?php } ?>
-                    <?php } else {?>
-
+                        <?php } else {?>
                         <div class="dropdown for-notification">
                             <button class="btn btn-primary dropdown-toggle" data-toggle="modal" data-target="#loginModal">
                                 <i class="fa fa-sign-in"></i>
                             </button>
                         </div>
-
                         <div class="dropdown for-message">
                             <button class="btn btn-secondary dropdown-toggle" data-toggle="modal" data-target="#rndSlrModal">
                                 <i class="fa fa-tasks"></i>
@@ -61,58 +57,56 @@
                     <?php } ?>
                 </div>
 
-                <?php if($this->session->userdata('logged_in')) { ?>
-                    <?php if($this->session->userdata('type') == 'SUPER_ADMIN') { ?>
-                        <!-- ====ADMIN==== -->
-                        <?php $admin = $this->Backend_model->show_admin($this->session->userdata('user_id')); ?>
-                        <div class="user-area dropdown float-right">
-                            <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
-                                <img class="user-avatar rounded-circle" src="<?php echo base_url(); ?>assets/images/admin.jpg" alt="Image">
+                <?php if($this->session->userdata('blogged_in')) { ?>
+                    <!-- ====ADMIN==== -->
+                    <?php $admin = $this->Backend_model->show_admin($this->session->userdata('user_id')); ?>
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="<?php echo base_url(); ?>assets/images/admin.jpg" alt="Image">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            
+                            <a class="nav-link" href="<?php echo base_url(); ?>admin/dashboard"><i class="fa fa-laptop"></i>My Dashboard</a>
+                            
+                            <a class="nav-link" href="<?php echo base_url(); ?>admin/profile"><i class="fa fa-user"></i>My Profile</a>
+
+                            <a class="nav-link" href="<?php echo base_url(); ?>admin/notifications">
+                                <i class="fa fa-bell"></i>Notifications 
+                                <span class="count">13</span>
                             </a>
 
-                            <div class="user-menu dropdown-menu">
-                                
-                                <a class="nav-link" href="<?php echo base_url(); ?>admin/dashboard"><i class="fa fa-laptop"></i>My Dashboard</a>
-                                
-                                <a class="nav-link" href="<?php echo base_url(); ?>admin/profile"><i class="fa fa-user"></i>My Profile</a>
-
-                                <a class="nav-link" href="<?php echo base_url(); ?>admin/notifications">
-                                    <i class="fa fa-bell"></i>Notifications 
-                                    <span class="count">13</span>
-                                </a>
-
-                                <a class="nav-link" href="<?php echo base_url(); ?>admin/settings"><i class="fa fa-cog"></i>Settings</a>
-                                
-                                <a class="nav-link" href="<?php echo base_url(); ?>users/logout"><i class="fa fa-power-off"></i>Logout</a>
-                            </div>
+                            <a class="nav-link" href="<?php echo base_url(); ?>admin/settings"><i class="fa fa-cog"></i>Settings</a>
+                            
+                            <a class="nav-link" href="<?php echo base_url(); ?>admin/logout"><i class="fa fa-power-off"></i>Logout</a>
                         </div>
-                        <!-- //====ADMIN==== -->
-                    <?php } else {?>
-                        <!-- ====USER/SELLER==== -->
-                        <?php $user = $this->User_model->show_user($this->session->userdata('user_id')); ?>
-                        <div class="user-area dropdown float-right">
-                            <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
-                                <img class="user-avatar rounded-circle" src="<?php echo $user['profile_picture']; ?>" alt="Image">
+                    </div>
+                    <!-- //====ADMIN==== -->
+                <?php } elseif($this->session->userdata('ulogged_in')) {?>
+                    <!-- ====USER/SELLER==== -->
+                    <?php $user = $this->User_model->show_user($this->session->userdata('user_id')); ?>
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="<?php echo $user['profile_picture']; ?>" alt="Image">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="<?php echo base_url(); ?>users/dashboard"><i class="fa fa-laptop"></i>My Dashboard</a>
+                            
+                            <a class="nav-link" href="<?php echo base_url(); ?>users/profile"><i class="fa fa-user"></i>My Profile</a>
+
+                            <a class="nav-link" href="<?php echo base_url(); ?>users/notifications">
+                                <i class="fa fa-bell"></i>Notifications 
+                                <span class="count">13</span>
                             </a>
 
-                            <div class="user-menu dropdown-menu">
-                                <a class="nav-link" href="<?php echo base_url(); ?>users/dashboard"><i class="fa fa-laptop"></i>My Dashboard</a>
-                                
-                                <a class="nav-link" href="<?php echo base_url(); ?>users/profile"><i class="fa fa-user"></i>My Profile</a>
-
-                                <a class="nav-link" href="<?php echo base_url(); ?>users/notifications">
-                                    <i class="fa fa-bell"></i>Notifications 
-                                    <span class="count">13</span>
-                                </a>
-
-                                <a class="nav-link" href="<?php echo base_url(); ?>users/settings"><i class="fa fa-cog"></i>Settings</a>
-                                <a class="nav-link" href="<?php echo base_url(); ?>users/logout"><i class="fa fa-power-off"></i>Logout</a>
-                            </div>
+                            <a class="nav-link" href="<?php echo base_url(); ?>users/settings"><i class="fa fa-cog"></i>Settings</a>
+                            <a class="nav-link" href="<?php echo base_url(); ?>users/logout"><i class="fa fa-power-off"></i>Logout</a>
                         </div>
-                        <!-- //====USER/SELLER==== -->
-                    <?php } ?>
+                    </div>
+                    <!-- //====USER/SELLER==== -->
                 <?php } ?>
             </div>
         </div>

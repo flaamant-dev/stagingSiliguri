@@ -102,7 +102,7 @@
                                     </div>
                                     <div class="doc-join">
                                         <?php 
-                                            if($this->session->userdata('logged_in')) { 
+                                            if($this->session->userdata('ulogged_in')) { 
                                                 $user = $this->Status_model->show_user_professional_status($this->session->userdata('user_id'));
                                                 if($user['profession'] == 'DOCTOR') {
                                         ?>

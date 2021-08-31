@@ -1,5 +1,5 @@
 <?php
-    if($this->session->userdata('logged_in')) {
+    if($this->session->userdata('ulogged_in')) {
         if ((time() - $this->session->userdata('login_time')) > 3600) {
             redirect('users/logout');
             exit;

@@ -1,4 +1,4 @@
-<?php if(!$this->session->userdata('logged_in')) {
+<?php if(!$this->session->userdata('ulogged_in')) {
     redirect('home');
 } else { ?> 
   <?php $user = $this->Status_model->show_user_professional_status($this->session->userdata('user_id')); ?>

@@ -52,9 +52,8 @@
 
 
 
-                    <?php if($this->session->userdata('logged_in')) {?>
-                        <li class="menu-title">Logged In</li>
-                        <?php if($this->session->userdata('type') == 'SUPER_ADMIN') { ?>
+                        <?php if($this->session->userdata('blogged_in')) { ?>
+                            <li class="menu-title">Logged In</li>
                             <li class="menu-item-has-children dropdown 
                                     <?php if($this->uri->segment(2) == 'dashboard'
                                             || $this->uri->segment(2) == 'admin_profile'
@@ -95,11 +94,14 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li>
+                                <a href="<?php echo base_url(); ?>admin/logout">
+                                <i class="menu-icon fa fa-power-off"></i>Logout </a>
+                            </li>
 
-                        <?php } else {?>
-                            <?php 
-                                $user = $this->Status_model->show_user_professional_status($this->session->userdata('user_id')); 
-                            ?>
+                        <?php } elseif($this->session->userdata('ulogged_in')) {?>
+                            <li class="menu-title">Logged In</li>
+                            <?php $user = $this->Status_model->show_user_professional_status($this->session->userdata('user_id')); ?>
                             <?php if($user['user_type'] == 'User') { ?>
                                 <li class="menu-item-has-children dropdown 
                                     <?php if($this->uri->segment(2) == 'dashboard'
@@ -246,12 +248,11 @@
                                     </ul>
                                 </li> -->
                             <?php } ?>
+                            <li>
+                                <a href="<?php echo base_url(); ?>users/logout">
+                                <i class="menu-icon fa fa-power-off"></i>Logout </a>
+                            </li>
                         <?php } ?>
-                        <li>
-                            <a href="<?php echo base_url(); ?>users/logout">
-                            <i class="menu-icon fa fa-power-off"></i>Logout </a>
-                        </li>
-                    <?php } ?>
 
 
 

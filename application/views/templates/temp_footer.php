@@ -56,19 +56,17 @@
                 <h4>My Account</h4>
                 <div class="mt-4">
                     <ul>
-                        <?php if($this->session->userdata('logged_in') ) {?>
-                            <?php if($this->session->userdata('type') == 'SUPER_ADMIN') { ?>
-                                <li><a class="text-white" href="<?php echo base_url(); ?>admin/dashboard">My Dashboard</a></li>
-                                <li><a class="text-white" href="<?php echo base_url(); ?>admin/profile">My Profile</a></li>
-                            <?php } else {?>
-                                <li><a class="text-white" href="<?php echo base_url(); ?>users/dashboard">My Dashboard</a></li>
-                                <li><a class="text-white" href="<?php echo base_url(); ?>users/profile">My Profile</a></li>
-                                <li><a class="text-white" href="<?php echo base_url(); ?>users/provideService">Register Business</a></li>
-                                    <?php $user = $this->Status_model->show_user_professional_status($this->session->userdata('user_id')); ?>
-                                    <?php if($user['user_type'] == 'Saler') { ?>
-                                        <li><a class="text-white" href="<?php echo base_url(); ?>users/store">My Store</a></li>
-                                    <?php } ?>
-                            <?php } ?>
+                        <?php if($this->session->userdata('blogged_in') ) { ?>
+                            <li><a class="text-white" href="<?php echo base_url(); ?>admin/dashboard">My Dashboard</a></li>
+                            <li><a class="text-white" href="<?php echo base_url(); ?>admin/profile">My Profile</a></li>
+                        <?php } elseif($this->session->userdata('ulogged_in') ) {?>
+                            <li><a class="text-white" href="<?php echo base_url(); ?>users/dashboard">My Dashboard</a></li>
+                            <li><a class="text-white" href="<?php echo base_url(); ?>users/profile">My Profile</a></li>
+                            <li><a class="text-white" href="<?php echo base_url(); ?>users/provideService">Register Business</a></li>
+                                <?php $user = $this->Status_model->show_user_professional_status($this->session->userdata('user_id')); ?>
+                                <?php if($user['user_type'] == 'Saler') { ?>
+                                    <li><a class="text-white" href="<?php echo base_url(); ?>users/store">My Store</a></li>
+                                <?php } ?>
                         <?php } else {?>
                             <li><a href="#" class="text-white" data-toggle="modal" data-target="#loginModal">Login / Register</a></li>
                             <li><a href="#" class="text-white" data-toggle="modal" data-target="#rndSlrModal">Register Business</a></li>

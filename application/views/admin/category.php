@@ -1,4 +1,4 @@
-<?php if(!$this->session->userdata('logged_in')) {
+<?php if(!$this->session->userdata('blogged_in')) {
     redirect('home');
 } else { ?>
 <?php if($this->uri->segment(1) == "admin") {

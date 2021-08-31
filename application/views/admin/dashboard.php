@@ -1,7 +1,7 @@
-<?php if(!$this->session->userdata('logged_in')) {
+<?php if(!$this->session->userdata('blogged_in')) {
     redirect('admin/home');
 } else { 
-    if($this->uri->segment(1) == "admin") {   ?>
+    // if($this->uri->segment(1) == "admin") {   ?>
 
     <!-- Content -->
     <div class="content">
@@ -171,4 +171,4 @@
 
     <?php $this->load->view('page_footer'); ?>
 
-<?php } } ?>
+<?php }  ?>

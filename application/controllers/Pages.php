@@ -81,7 +81,7 @@ class Pages extends CI_Controller {
 						);
 						$user_id = $this->Page_model->insert_session($user_data);	
 					}
-					$this->session->set_userdata('logged_in', 1);
+					$this->session->set_userdata('ulogged_in', 1);
 					$this->session->set_userdata('user_id', $user['user_id']);
 					$this->session->set_userdata('type', $user['user_type']);
 					$this->session->set_userdata('login_time', time());
@@ -110,7 +110,7 @@ class Pages extends CI_Controller {
                 
 					$user_id = $this->Page_model->Insert_user_data($user_data);		
 					
-					$this->session->set_userdata('logged_in', 1);
+					$this->session->set_userdata('ulogged_in', 1);
 					$this->session->set_userdata('user_id', $user_id);
 					$this->session->set_userdata('type', 'User');
 					$this->session->set_userdata('login_time', time());

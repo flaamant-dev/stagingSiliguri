@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
    
-$route['admin/dashboard'] = 'Backend/view/dashboard';
+$route['admin/dashboard'] = 'Backend/view';
 $route['business_profile/(:any)'] = 'Pages/view/business_profile/$1';
 $route['doctor_details/(:any)'] = 'Pages/view/doctor_details/$1';
 //$route['fb/fb_callback'] = 'Pages/fb_callback';
@@ -11,10 +11,10 @@ $route['admin/add_adminn'] = 'Backend/add_admin';
 $route['admin/admin_profile/(:any)'] = 'Backend/view/admin_profile/$1';
 $route['admin/seller_profile/(:any)'] = 'Backend/view/seller_profile/$1';
 $route['admin/enrolled_details/(:any)'] = 'Backend/view/enrolled_details/$1';
-$route['admin/(:any)'] = 'Backend/view/$1';
 $route['admin/logout'] = 'Backend/logout';
 $route['admin/users/(:any)'] = 'Users/$1';
 $route['admin/category/(:any)'] = 'Category/$1';
+$route['admin/(:any)'] = 'Backend/view/$1';
 $route['users/userlogin'] = 'Users/userlogin';
 $route['users/add_employee'] = 'Users/add_employee';
 $route['users/update_user_profile'] = 'Users/update_user_profile';

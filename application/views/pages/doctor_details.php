@@ -5,7 +5,7 @@
     $professional_details = $this->User_model->show_professional_info($doc_id); 
     $all_clinic = $this->Business_model->show_all_clinic($doc_id); 
     //$this->load->view('all_modals');
-    if(!$this->session->userdata('logged_in')) { 
+    if(!$this->session->userdata('ulogged_in')) { 
         $user_id = 0;
     } else {
         $user_id = $this->session->userdata('user_id');

@@ -1,4 +1,4 @@
-<?php if(!$this->session->userdata('logged_in')) {
+<?php if(!$this->session->userdata('ulogged_in')) {
     redirect('home');
 } else { 
     $product =  $this->Product_model->show_product_saler($this->session->userdata('user_id'));

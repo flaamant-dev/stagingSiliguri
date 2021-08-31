@@ -10,6 +10,7 @@ class Backend extends CI_Controller {
 		}	
 		
 		$data['customercare'] = $this->Page_model->show_customercare(); 
+		$data['keywords'] = 'This is Siliguri.City';
 
 		// if (!empty($_SERVER['HTTP_CLIENT_IP'])) {   //check ip from share internet
         //     $ip = $_SERVER['HTTP_CLIENT_IP'];
@@ -17,11 +18,9 @@ class Backend extends CI_Controller {
         //     $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
         // } else {
         //     $ip = $_SERVER['REMOTE_ADDR'];
-		// }
-		
+		// }		
 		// $this->Backend_model->store_ip($ip);
-		$data['keywords'] = 'This is Siliguri.City';
-
+		
 		$this->load->view('templates/header',$data);
 		$this->load->view('templates/nav');
 		$this->load->view('templates/top');
@@ -37,29 +36,29 @@ class Backend extends CI_Controller {
 		$this->form_validation->set_rules('input_pswd', 'Password','required');
 		
 		if($this->form_validation->run() === FALSE) {		
-            $referer = $_SERVER['HTTP_REFERER'];
-            header("Location: $referer");
+            // $referer = $_SERVER['HTTP_REFERER'];
+            // header("Location: $referer");
+			redirect('admin/home');
 		} else {
 			$username = $this->input->post('input_email');
 			$password = md5($this->input->post('input_pswd'));
 			
 			$user_id = $this->Backend_model->backend_login($username,$password);
-			$login_time = $this->Backend_model->update_loginTime($user_id['admin_id']);
 			
 			if(is_array($user_id)) {
+				$login_time = $this->Backend_model->update_loginTime($user_id['admin_id']);
 			    $user_dataaa = array(
 					'user_id'   	=> $user_id['admin_id'],
 					'name'  		=> $user_id['admin_name'],
 					'email'  		=> $username,
 					'type'      	=> $user_id['admin_type'],
-					'logged_in' 	=> true
+					'blogged_in' 	=> true
 			    );
-			    
-	    		$this->session->set_flashdata('backend_loggedin','You are now logged in.');
-			    $this->session->set_userdata($user_dataaa);		 
+	    		// $this->session->set_flashdata('backend_loggedin','You are now logged in.');
+			    $this->session->set_userdata($user_dataaa);	 
 			    redirect('admin/dashboard');
 			} else {
-				$this->session->set_flashdata('login_failed','Invalid username or password.');		
+				// $this->session->set_flashdata('login_failed','Invalid username or password.');		
 				// $referer = $_SERVER['HTTP_REFERER'];
 				// header("Location: $referer");		    
 			    redirect('admin/home');
@@ -157,4 +156,15 @@ class Backend extends CI_Controller {
         $result = $this->Backend_model->toggle_backendUser();        
         echo $result;		
     }
+
+	//logout Admin
+	public function logout() {
+	    $this->session->unset_userdata('user_id');
+	    $this->session->unset_userdata('name');
+	    $this->session->unset_userdata('blogged_in');
+	    $this->session->unset_userdata('type');
+	    $this->session->unset_userdata('email');
+		
+		redirect('home');
+	}
 }
