@@ -34,7 +34,7 @@ if($_SERVER['HTTP_HOST'] == 'localhost') {
 		'hostname' => 'localhost',
     	'username' => 'grandegv_root',
     	'password' => 'Grandred@1234',
-    	'database' => 'grandegv_siliguri',
+    	'database' => 'grandegv_stagingSiliguri',
 		'dbdriver' => 'mysqli',
 		'dbprefix' => '',
 		'pconnect' => FALSE,
