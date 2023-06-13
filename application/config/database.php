@@ -32,9 +32,9 @@ if($_SERVER['HTTP_HOST'] == 'localhost') {
 	$db['default'] = array(
 		'dsn'	=> '',
 		'hostname' => 'localhost',
-    	'username' => 'grandegv_root',
-    	'password' => 'Grandred@1234',
-    	'database' => 'grandegv_stagingSiliguri',
+    	'username' => 'u502046917_flaamantDoc',
+    	'password' => 'Flaamant@123',
+    	'database' => 'u502046917_doctor',
 		'dbdriver' => 'mysqli',
 		'dbprefix' => '',
 		'pconnect' => FALSE,
