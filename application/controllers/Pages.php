@@ -22,7 +22,7 @@ class Pages extends CI_Controller {
 		$google_client->setClientId('264582324569-hut6bidobhol01s5hb2oa7mt4el715c8.apps.googleusercontent.com'); //Define your ClientID
 
         $google_client->setClientSecret('JsY-aphl2wHbBEhljaEWFMPP');
-		$google_client->setRedirectUri('https://staging.siliguri.city/home');
+		$google_client->setRedirectUri('https://doc.flaamant.city');
 		// $google_client->setRedirectUri('http://localhost/stagingSiliguri/');
 
         $google_client->addScope('email');
